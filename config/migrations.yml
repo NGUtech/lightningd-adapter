@@ -1,0 +1,19 @@
+migration_loaders:
+  lightningd.adapter.message_queue:
+    class: Daikon\Flysystem\Migration\FlysystemMigrationLoader
+    connector: lightningd.adapter.filesystem
+    settings:
+      location: migration://rabbitmq
+
+migration_adapters:
+  lightningd.adapter.message_queue:
+    class: Daikon\RabbitMq3\Migration\RabbitMq3MigrationAdapter
+    connector: lightningd.adapter.message_queue.admin
+    settings:
+      exchange: lightningd.adapter.migration_list
+
+migration_targets:
+  lightningd.adapter.message_queue:
+    enabled: true
+    migration_adapter: lightningd.adapter.message_queue
+    migration_loader: lightningd.adapter.message_queue

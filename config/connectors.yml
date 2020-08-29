@@ -1,0 +1,17 @@
+lightningd.adapter.filesystem:
+  connector: daikon.filesystem
+  settings:
+    mounts:
+      migration:
+        adapter: League\Flysystem\Adapter\Local
+        location: ${crates.lightningd.adapter.migration_dir}
+
+lightningd.adapter.message_queue:
+  connector: daikon.message_queue
+
+lightningd.adapter.message_queue.admin:
+  connector: daikon.message_queue.admin
+
+lightningd.adapter.rpc:
+  class: NGUtech\Lightningd\Connector\LightningdRpcConnector
+  settings: ${crates.lightningd.adapter.connectors.rpc}

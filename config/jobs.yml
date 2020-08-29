@@ -1,0 +1,5 @@
+job_workers:
+  lightningd.adapter.message_queue:
+    class: NGUtech\Lightningd\Message\LightningdMessageWorker
+    dependencies:
+      connector: lightningd.adapter.message_queue
