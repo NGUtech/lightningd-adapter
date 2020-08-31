@@ -238,7 +238,7 @@ class LightningdService implements LightningServiceInterface
 
     protected function convert(string $amount, string $currency = SatoshiCurrencies::MSAT): Bitcoin
     {
-        return $this->moneyService->convert($this->moneyService->parse($amount ?? '0'.$currency), $currency);
+        return $this->moneyService->convert($this->moneyService->parse($amount), $currency);
     }
 
     protected function mapInvoiceState(string $state): InvoiceState
