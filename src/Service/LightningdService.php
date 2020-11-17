@@ -155,6 +155,7 @@ class LightningdService implements LightningServiceInterface
             'request' => $result['invoices'][0]['bolt11'],
             'destination' => $result['invoices'][0]['destination'],
             'amount' => $result['invoices'][0]['amount_msat'],
+            'amountPaid' => $result['invoices'][0]['amount_received_msat'],
             'label' => $result['invoices'][0]['label'],
             'description' => $result['invoices'][0]['description'],
             'state' => (string)$this->mapInvoiceState($result['invoices'][0]['status']),
@@ -175,6 +176,7 @@ class LightningdService implements LightningServiceInterface
             'request' => $result['pays'][0]['bolt11'],
             'destination' => $result['pays'][0]['destination'],
             'amount' => $result['pays'][0]['amount_msat'],
+            'amountPaid' => $result['pays'][0]['amount_sent_msat'],
             'feeSettled' => (
                 intval($result['pays'][0]['amount_sent_msat']) - intval($result['pays'][0]['amount_msat'])
             ).SatoshiCurrencies::MSAT,
