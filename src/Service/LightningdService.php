@@ -142,9 +142,9 @@ class LightningdService implements LightningServiceInterface
         return !$routeFee->isZero() && $feeEstimate->isGreaterThanOrEqual($routeFee) ? $feeEstimate : $routeFee;
     }
 
-    public function getInvoice(string $label): ?LightningInvoice
+    public function getInvoice(Hash $preimageHash): ?LightningInvoice
     {
-        $result = $this->call('listinvoices', ['label' => $label]);
+        $result = $this->call('listinvoices', ['payment_hash' => (string)$preimageHash]);
         if (empty($result['invoices'][0])) {
             return null;
         }
