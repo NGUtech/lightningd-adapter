@@ -1770,16 +1770,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.9.1",
+            "version": "2.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "307fb34a5ab697461ec4c9db865b20ff2fd40771"
+                "reference": "df7933820090489623ce0be5e85c7e693638e536"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/307fb34a5ab697461ec4c9db865b20ff2fd40771",
-                "reference": "307fb34a5ab697461ec4c9db865b20ff2fd40771",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/df7933820090489623ce0be5e85c7e693638e536",
+                "reference": "df7933820090489623ce0be5e85c7e693638e536",
                 "shasum": ""
             },
             "require": {
@@ -1829,9 +1829,15 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.9.1"
+                "source": "https://github.com/filp/whoops/tree/2.9.2"
             },
-            "time": "2020-11-01T12:00:00+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/denis-sokolov",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-01-24T12:00:00+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -3008,12 +3014,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/NGUtech/bitcoin-interop.git",
-                "reference": "61ddb27df0c7370428de4d882ab6028116f535d2"
+                "reference": "cf6670d2304142752dc7b319c6907078a06b8978"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NGUtech/bitcoin-interop/zipball/61ddb27df0c7370428de4d882ab6028116f535d2",
-                "reference": "61ddb27df0c7370428de4d882ab6028116f535d2",
+                "url": "https://api.github.com/repos/NGUtech/bitcoin-interop/zipball/cf6670d2304142752dc7b319c6907078a06b8978",
+                "reference": "cf6670d2304142752dc7b319c6907078a06b8978",
                 "shasum": ""
             },
             "require": {
@@ -3055,7 +3061,7 @@
                 "issues": "https://github.com/NGUtech/bitcoin-interop/issues",
                 "source": "https://github.com/NGUtech/bitcoin-interop/tree/master"
             },
-            "time": "2021-01-19T18:03:17+00:00"
+            "time": "2021-01-27T13:11:37+00:00"
         },
         {
             "name": "ngutech/lightning-interop",
@@ -3063,12 +3069,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/NGUtech/lightning-interop.git",
-                "reference": "0102f102a8844d45654757b79fe0c81fad3a9312"
+                "reference": "d9d7e01b591d6b555add4df64b824af12acfa5e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NGUtech/lightning-interop/zipball/0102f102a8844d45654757b79fe0c81fad3a9312",
-                "reference": "0102f102a8844d45654757b79fe0c81fad3a9312",
+                "url": "https://api.github.com/repos/NGUtech/lightning-interop/zipball/d9d7e01b591d6b555add4df64b824af12acfa5e9",
+                "reference": "d9d7e01b591d6b555add4df64b824af12acfa5e9",
                 "shasum": ""
             },
             "require": {
@@ -3109,7 +3115,7 @@
                 "issues": "https://github.com/NGUtech/lightning-interop/issues",
                 "source": "https://github.com/NGUtech/lightning-interop/tree/master"
             },
-            "time": "2021-01-22T15:32:13+00:00"
+            "time": "2021-01-27T13:17:09+00:00"
         },
         {
             "name": "php-amqplib/php-amqplib",

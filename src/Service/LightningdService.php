@@ -196,6 +196,8 @@ class LightningdService implements LightningServiceInterface
         return ($this->settings['request']['enabled'] ?? true)
             && $amount->isGreaterThanOrEqual(
                 $this->convert(($this->settings['request']['minimum'] ?? '1'.SatoshiCurrencies::MSAT))
+            ) && $amount->isLessThanOrEqual(
+                $this->convert(($this->settings['request']['maximum'] ?? '4294967295'.SatoshiCurrencies::MSAT))
             );
     }
 
@@ -222,7 +224,6 @@ class LightningdService implements LightningServiceInterface
         do {
             $response .= $socket->read(1024);
         } while (substr($response, -1) !== PHP_EOL);
-
         $content = json_decode($response, true);
         if (!$content || isset($content['error'])) {
             if (isset($content['error']) && in_array($content['error']['code'], [
